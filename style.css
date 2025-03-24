@@ -170,7 +170,7 @@
       
     }
     .nav-links {
-      position: absolute;
+      position: fixed;
       top: 70px; /* wysokość nagłówka */
       right: 0;
       background-color: #BF8969;
@@ -180,11 +180,12 @@
       text-align: center;
       border-left: 1px solid #ccc;
       padding: 1rem;
-      transform: translateX(100%);
-      transition: transform 0.3s ease-in-out;
+      right: -100%;
+      transition: right 0.3s ease-in-out;
+      
     }
     .nav-links.open {
-      transform: translateX(0%);
+      right: 0;
     }
     .nav-links li {
       margin-bottom: 1rem;
