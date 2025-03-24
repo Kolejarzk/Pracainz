@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formularz kontaktowy - Portfolio Rafała</title>
+  <!-- Odwołanie do wspólnego arkusza stylów -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Główny kontener (wrapper) -->
+  <div class="wrapper">
+
+    <!-- Nagłówek i menu -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html">Logo</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Strona główna</a></li>
+          <li><a href="galeria.html">Galeria prac</a></li>
+          <li><a href="formularz.html" class="active">Formularz kontaktowy</a></li>
+          <li><a href="omnie.html">O mnie</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Główna zawartość podstrony Formularz kontaktowy -->
+    <main>
+      <section class="contact-form-section">
+        <h1>Kontakt</h1>
+        <p>
+          Masz pytania dotyczące moich prac, chcesz nawiązać współpracę lub 
+          po prostu przesłać opinię? Wypełnij formularz i wyślij wiadomość.
+        </p>
+
+        <form class="contact-form" action="#" method="POST">
+          <!-- Adres e-mail -->
+          <div class="form-group">
+            <label for="email">Adres e-mail</label>
+            <input type="email" id="email" name="email" placeholder="Twój adres e-mail" required>
+          </div>
+
+          <!-- Numer telefonu -->
+          <div class="form-group">
+            <label for="phone">Numer telefonu</label>
+            <input type="tel" id="phone" name="phone" placeholder="Twój numer telefonu">
+          </div>
+
+          <!-- Treść wiadomości -->
+          <div class="form-group">
+            <label for="message">Treść wiadomości</label>
+            <textarea id="message" name="message" rows="5" placeholder="Wpisz treść wiadomości" required></textarea>
+          </div>
+
+          <!-- Przycisk Wyślij -->
+          <button type="submit" class="btn-submit">Wyślij</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Stopka -->
+    <footer>
+      <p>&copy; 2025 Rafał – Wszystkie prawa zastrzeżone.</p>
+    </footer>
+  </div>
+
+  <!-- Skrypt JS (np. do obsługi hamburger menu) -->
+  <script src="script.js"></script>
+</body>
+</html>

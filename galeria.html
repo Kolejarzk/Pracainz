@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galeria prac - Portfolio Rafała</title>
+  <!-- Odwołanie do wspólnego arkusza stylów -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Główny kontener (wrapper) - Flexbox do "przyklejenia" stopki -->
+  <div class="wrapper">
+
+    <!-- Nagłówek i menu -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html">Logo</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <!-- Możesz wyróżnić aktualną stronę za pomocą klasy "active" lub stylu -->
+          <li><a href="index.html">Strona główna</a></li>
+          <li><a href="galeria.html">Galeria prac</a></li>
+          <li><a href="formularz.html" class="active">Formularz kontaktowy</a></li>
+          <li><a href="omnie.html">O mnie</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Główna zawartość podstrony Galeria -->
+    <main>
+      <section class="gallery">
+        <h1>Galeria prac</h1>
+        <p>
+          Poniżej znajdziesz wybór moich prac graficznych, zarówno w formie wydruków,
+          jak i projektów digitalowych. Każda miniatura zawiera krótki opis projektu.
+        </p>
+
+        <!-- Siatka z pracami -->
+        <div class="gallery-grid">
+          <!-- Element 1 -->
+          <div class="gallery-item">
+            <img src="images/projekt1.jpg" alt="Projekt 1" />
+            <h3>Projekt 1</h3>
+            <p>
+              Opis projektu 1. Krótka informacja o koncepcji, inspiracjach
+              i zastosowanej technice.
+            </p>
+          </div>
+          <!-- Element 2 -->
+          <div class="gallery-item">
+            <img src="images/projekt2.png" alt="Projekt 2" />
+            <h3>Projekt 2</h3>
+            <p>
+              Opis projektu 2. Przykładowe zlecenie zrealizowane dla klienta X,
+              uwzględniające określoną kolorystykę i styl.
+            </p>
+          </div>
+          <!-- Element 3 -->
+          <div class="gallery-item">
+            <img src="images/projekt3.jpg" alt="Projekt 3" />
+            <h3>Projekt 3</h3>
+            <p>
+              Opis projektu 3. Wykorzystano narzędzia takie jak Adobe Photoshop
+              i Illustrator do stworzenia oryginalnego designu.
+            </p>
+          </div>
+          <!-- Dodaj więcej prac według potrzeb -->
+        </div>
+      </section>
+    </main>
+
+    <!-- Stopka -->
+    <footer>
+      <p>&copy; 2025 Rafał – Wszystkie prawa zastrzeżone.</p>
+    </footer>
+  </div>
+
+  <!-- Skrypt JS (np. do obsługi hamburger menu) -->
+  <script src="script.js"></script>
+</body>
+</html>

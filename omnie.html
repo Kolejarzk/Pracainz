@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>O mnie - Portfolio Rafała</title>
+  <!-- Odwołanie do wspólnego arkusza stylów -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Główny kontener (wrapper) -->
+  <div class="wrapper">
+
+    <!-- Nagłówek i menu -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html">Logo</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Strona główna</a></li>
+          <li><a href="galeria.html">Galeria prac</a></li>
+          <li><a href="formularz.html">Formularz kontaktowy</a></li>
+          <li><a href="omnie.html" class="active">O mnie</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Główna zawartość podstrony "O mnie" -->
+    <main>
+      <section class="about-section">
+        <div class="about-content">
+          <!-- Lewa kolumna: Kim jestem + opis -->
+          <div class="about-text">
+            <h1>Kim jestem</h1>
+            <p>
+              Cześć! Nazywam się Rafał i jestem pasjonatem grafiki oraz projektowania.
+              Specjalizuję się w tworzeniu nowoczesnych i kreatywnych projektów, zarówno
+              w formie cyfrowej, jak i drukowanej. Uwielbiam eksplorować nowe trendy
+              i stale rozwijać swoje umiejętności, aby dostarczać klientom
+              najlepsze możliwe rozwiązania wizualne.
+            </p>
+            <p>
+              Na mojej stronie znajdziesz przykładowe prace, które pokazują mój styl
+              i sposób myślenia o projektowaniu. Zapraszam również do kontaktu –
+              chętnie odpowiem na wszystkie pytania i podejmę się ciekawych wyzwań.
+            </p>
+          </div>
+
+          <!-- Prawa kolumna: Pobierz moje CV -->
+          <div class="cv-download">
+            <h2>Pobierz moje CV</h2>
+            <a class="cv-button" href="akt.pdf" target="_blank">
+              <span class="cv-text">Pobierz</span>
+              <!-- Ikona pobierania (prosta, np. strzałka w dół) -->
+              <span class="cv-icon">&#8681;</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Stopka -->
+    <footer>
+      <p>&copy; 2025 Rafał – Wszystkie prawa zastrzeżone.</p>
+    </footer>
+  </div>
+
+  <!-- Skrypt JS (np. do obsługi hamburger menu) -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,403 @@
+/* RESET (opcjonalnie) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+  
+  /* Układ całej strony:
+     - .wrapper to główny kontener,
+     - Używamy flexbox do "rozciągnięcia" main tak, by stopka była zawsze na dole.
+  */
+  html, body {
+    height: 100%;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    color: #212121;
+    background-color: #D9D5D0;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* wrapper wypełnia dostępne miejsce w body */
+  }
+  
+  /* Nagłówek i nawigacja */
+  header {
+    background-color: #BF8969;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .navbar {
+    max-width: 1200px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  
+  .logo a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-left: 1rem;
+    
+  }
+
+  /* Hamburger menu */
+  .hamburger {
+    display: none; /* Pokazujemy w media query */
+    flex-direction: column;
+    cursor: pointer;
+    background-color: #BF8969;
+  }
+  
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+  
+  /* Lista linków w nawigacji */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    
+    
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+    
+  }
+  
+  .nav-links li a:hover {
+    color: #0077ff;
+  }
+  
+  /* MAIN - rozciąga się, aby stopka była na dole */
+  main {
+    flex: 1; /* Kluczowy element, dzięki temu stopka będzie przyklejona na dole */
+    max-width: 1920px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+  
+  /* Sekcja intro: tekst + zmieniający się obraz po prawej */
+  .intro {
+    display: flex;
+    flex-wrap: wrap; /* pozwala zawinąć, gdy brak miejsca */
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+    
+  }
+  
+  .intro-text {
+    flex: 1;
+    min-width: 250px; /* aby się ładnie zawijało w mniejszych rozdzielczościach */
+    
+    margin-top: 5%;
+    
+  }
+  
+  .intro-text h1 {
+   
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #F23535;
+  }
+  
+  .intro-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+   
+  }
+  
+  .intro-image {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .intro-image img {
+    max-width: 100%;
+    height: 250px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Sekcja przykładowych prac */
+  .portfolio-preview h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  
+  
+  
+  /* STOPKA */
+  footer {
+    background-color: #BF8969;
+   
+    text-align: center;
+    padding: 1rem 0;
+    /* Nie używamy position: absolute ani fixed – 
+       flex:1 w main powoduje, że stopka zawsze będzie na dole. */
+  }
+  
+  /* MEDIA QUERIES */
+  /* Dla ekranów poniżej 768px zmieniamy układ nawigacji */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+      
+    }
+    .nav-links {
+      position: absolute;
+      top: 70px; /* wysokość nagłówka */
+      right: 0;
+      background-color: #BF8969;
+      flex-direction: column;
+      gap: 0;
+      width:100%;
+      text-align: center;
+      border-left: 1px solid #ccc;
+      padding: 1rem;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+    }
+    .nav-links.open {
+      transform: translateX(0%);
+    }
+    .nav-links li {
+      margin-bottom: 1rem;
+    }
+  
+    /* Siatka prac w jednej kolumnie */
+    .works {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .gallery {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  .gallery h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center; /* Jeżeli chcesz wyśrodkować tytuł */
+  }
+  
+  .gallery p {
+    text-align: center; /* Opcjonalnie wyśrodkowany opis */
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  
+  /* Siatka z projektami */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* auto-fit z minmax pozwala elastycznie dostosować liczbę kolumn 
+       w zależności od szerokości ekranu */
+    gap: 1rem;
+  }
+  
+  .gallery-item {
+    background-color: #c8c4bf;
+    border-radius: 4px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1rem;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .gallery-item h3 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+  }
+  
+  .gallery-item p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  /* form */
+
+  /* Sekcja formularza kontaktowego */
+.contact-form-section {
+  max-width: 600px; /* Ograniczamy szerokość sekcji */
+  margin: 0 auto;   /* Wyśrodkowanie sekcji */
+  padding: 2rem 1rem;
+  background-color: #D9D5D0; /* Delikatne tło, jeśli chcesz odróżnić sekcję */
+  border-radius: 4px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.contact-form-section h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.contact-form-section p {
+  text-align: center;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Styl samego formularza */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Odstęp między polami */
+}
+
+/* Każda grupa formularza */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Etykieta pól */
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+/* Pola input i textarea */
+.form-group input,
+.form-group textarea {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Przycisk wysyłania */
+.btn-submit {
+  background-color: #FF9800;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  align-self: flex-start; /* Możesz zmienić na center lub right, w zależności od potrzeb */
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #FF9800;
+}
+
+/* omnie*/
+
+/* Sekcja "O mnie" */
+.about-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap; /* Umożliwia zawijanie kolumn na małych ekranach */
+  gap: 2rem;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px; /* Minimalna szerokość kolumny z opisem */
+}
+
+.about-text h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Prawa kolumna: Pobierz CV */
+.cv-download {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* lub center, jeśli chcesz wyśrodkować */
+  justify-content: center;
+  background-color: #D9D5D0;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.cv-download h2 {
+  margin-bottom: 1rem;
+}
+
+.cv-button {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  background-color: #0077ff;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cv-button:hover {
+  background-color: #0056cc;
+}
+
+.cv-text {
+  margin-right: 0.5rem; /* Odstęp przed ikoną */
+}
+
+.cv-icon {
+  font-size: 1.2rem; /* Rozmiar strzałki */
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+}
+
+  

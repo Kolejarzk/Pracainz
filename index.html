@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio Rafała</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Struktura Flexbox na całe body -->
+  <div class="wrapper">
+    
+    <!-- Górny pasek nawigacji -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="#">Logo</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Strona główna</a></li>
+          <li><a href="galeria.html">Galeria prac</a></li>
+          <li><a href="formularz.html">Formularz kontaktowy</a></li>
+          <li><a href="omnie.html">O mnie</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <!-- Główna zawartość strony -->
+    <main>
+      <!-- Sekcja powitalna i przykład pracy -->
+      <section class="intro">
+        <!-- Tekst po lewej stronie -->
+        <div class="intro-text">
+          <h1>Hej, mam na imię Rafał</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pretium felis enim, in eleifend ligula sagittis non. Vivamus ullamcorper sapien ut dignissim elementum. Nullam tristique ultricies maximus. Curabitur nisl est, rhoncus id vulputate nec, vestibulum sit amet risus. Aliquam efficitur ex nec pulvinar pulvinar. Aenean commodo est magna, sed dictum diam fermentum sed. Quisque at turpis a est dapibus rhoncus sit amet fringilla orci. Donec quis vestibulum libero, ut pulvinar neque. Donec porta et metus nec ornare. In hac habitasse platea dictumst. Vestibulum mi purus, bibendum vitae posuere a, interdum in est. Phasellus massa tortor, maximus sed nisi non, laoreet pellentesque felis.
+
+Donec rhoncus enim venenatis massa lobortis sagittis. Vivamus tincidunt tellus a dui maximus blandit. Donec congue cursus urna. Fusce in eros nisi. Pellentesque rhoncus magna purus, at rhoncus orci viverra sed. In eu suscipit quam. Fusce id metus sit amet enim dictum ultrices ut eget ipsum. Suspendisse eget finibus erat. Suspendisse imperdiet tortor a facilisis rutrum. Pellentesque nec metus eu nulla mattis sollicitudin. Duis cursus vulputate tellus, quis eleifend eros blandit non.
+          </p>
+        </div>
+        <!-- Zdjęcie / Slideshow po prawej stronie -->
+        <div class="intro-image">
+          <!-- img z id, aby w JS można było podmieniać src -->
+          <img id="introImage" src="images/projekt1.jpg" alt="Przykładowa praca">
+        </div>
+      </section>
+
+      <!-- Sekcja przykładowych prac -->
+   
+    </main>
+
+    <!-- Stopka (sticky na dole) -->
+    <footer>
+      <p>&copy; 2025 Rafał – Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+  </div> <!-- .wrapper koniec -->
+
+  <!-- Plik JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
