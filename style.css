@@ -190,12 +190,13 @@
       background-color: #201f1f55;
       flex-direction: column;
       gap: 0;
-      width: 33%;
+      width: 40%;
+      
       padding: 1rem;
       border-left: 1px solid #ccc;
       border-bottom: 1px solid #ccc;
       border-radius: 1rem;
-      transition: right 0.9s ease-in-out, 0.9s ease-in-out;
+      transition: right 0.3s ease-in-out, 0.3s ease-in-out;
       display: flex;
       align-items: flex-start;
       justify-content: flex-start;
