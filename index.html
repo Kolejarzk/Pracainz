@@ -8,13 +8,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+
+
+
+ 
 </head>
 <body>
+  
   <!-- Struktura Flexbox na całe body -->
   <div class="wrapper">
     
     <!-- Górny pasek nawigacji -->
-    <header>
+    <header class="header">
       <nav class="navbar">
         <div class="logo">
           <a href="#">Rafał Klusek | Design</a>
@@ -39,7 +45,7 @@
       <section class="intro">
         <!-- Tekst po lewej stronie -->
         <div class="intro-text">
-          <h1>Hej, mam na imię Rafał</h1>
+          <h1 >Hej, mam na imię Rafał</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pretium felis enim, in eleifend ligula sagittis non. Vivamus ullamcorper sapien ut dignissim elementum. Nullam tristique ultricies maximus. Curabitur nisl est, rhoncus id vulputate nec, vestibulum sit amet risus. Aliquam efficitur ex nec pulvinar pulvinar. Aenean commodo est magna, sed dictum diam fermentum sed. Quisque at turpis a est dapibus rhoncus sit amet fringilla orci. Donec quis vestibulum libero, ut pulvinar neque. Donec porta et metus nec ornare. In hac habitasse platea dictumst. Vestibulum mi purus, bibendum vitae posuere a, interdum in est. Phasellus massa tortor, maximus sed nisi non, laoreet pellentesque felis.
 
@@ -58,13 +64,14 @@ Donec rhoncus enim venenatis massa lobortis sagittis. Vivamus tincidunt tellus a
     </main>
 
     <!-- Stopka (sticky na dole) -->
-    <footer>
+    <footer class="footer">
       <p>&copy; 2025 Rafał – Wszystkie prawa zastrzeżone.</p>
     </footer>
 
   </div> <!-- .wrapper koniec -->
-
-  <!-- Plik JavaScript -->
-  <script src="script.js"></script>
+   <!-- Plik JavaScript -->
+   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+   <script src="script.js"></script>
+  
 </body>
 </html>
