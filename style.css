@@ -191,7 +191,7 @@
       flex-direction: column;
       gap: 0;
       width: 40%;
-      
+      height: 500%;
       padding: 1rem;
       border-left: 1px solid #ccc;
       border-bottom: 1px solid #ccc;
