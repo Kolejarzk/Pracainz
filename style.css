@@ -60,7 +60,7 @@
     display: none; /* Pokazujemy w media query */
     flex-direction: column;
     cursor: pointer;
-    background-color: #201f1f;
+    
    
   }
   
@@ -72,6 +72,12 @@
     transition: 0.4s;
   }
   
+
+  .hamburger.open span:nth-child(2) {
+    transform: translate(-1rem);
+
+  }
+
   /* Lista linków w nawigacji */
   .nav-links {
     list-style: none;
