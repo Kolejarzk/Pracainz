@@ -74,7 +74,7 @@
   
 
   .hamburger.open span:nth-child(2) {
-    transform: translate(-1rem);
+    transform: translate(-0.7rem);
 
   }
 
@@ -96,6 +96,7 @@
   .nav-links li a:hover {
     color: #6d3e8b;
     transition: color 1.0s;
+   
   }
   
   /* MAIN - rozciąga się, aby stopka była na dole */
@@ -181,19 +182,23 @@
       
     }
     .nav-links {
-      position: fixed;
-      top: 70px; /* wysokość nagłówka */
+      position: absolute;
+      top: 65px; /* wysokość nagłówka */
       right: 0;
-      background-color: #201f1f;
+      background-color: #201f1f55;
       flex-direction: column;
       gap: 0;
-      width:100%;
-      text-align: center;
+      width:33%;
+      height: 100%;
       border-left: 1px solid #ccc;
       padding: 1rem;
       right: -100%;
       transition: right 0.3s ease-in-out;
-      border-radius: 1rem;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      backdrop-filter: blur(10px);
+      font-size: large;
       
     }
     .nav-links.open {
