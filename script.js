@@ -35,7 +35,7 @@ gsap.from('.header',{duration: 1, y:'-100%',ease: 'bounce'})
 
 gsap.from('.navbar',{duration: 1, opacity: 0, delay: 1, stagger: .5})
 
-gsap.from('.intro-text',{duration: 1, x: '-50vw', delay: 1, ease: Power1})
+gsap.from('.intro-text',{duration: 1, x: '-100vw', delay: 1, ease: Power1})
 
 gsap.from('.intro-image',{duration: 1, x: '50vw', delay: 1, ease: "expoScale(0.5,7,none)" })
 
