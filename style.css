@@ -191,6 +191,7 @@
       width:33%;
       height: 100%;
       border-left: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
       padding: 1rem;
       right: -100%;
       transition: right 0.3s ease-in-out;
@@ -198,7 +199,11 @@
       align-items: flex-start;
       justify-content: flex-start;
       backdrop-filter: blur(10px);
-      font-size: large;
+      font-size:large;
+     
+     
+      border-radius: 1rem;
+
       
     }
     .nav-links.open {
