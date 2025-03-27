@@ -31,12 +31,11 @@ function changeImage() {
 setInterval(changeImage, 3000);
 
 // gsap code here!
-gsap.from('.header',{duration: 1, y:'-100%',ease: 'bounce'})
 
-gsap.from('.navbar',{duration: 1, opacity: 0, delay: 1, stagger: .5})
-
-gsap.from('.intro-text',{duration: 1, x: '-100vw', delay: 1, ease: Power1})
-
-gsap.from('.intro-image',{duration: 1, x: '50vw', delay: 1, ease: "expoScale(0.5,7,none)" })
-
-gsap.from('.footer',{duration: 1, y: '100%', delay: 1, ease: Power1})
+const timeline = gsap.timeline({defaults: {duration: 1}})
+timeline
+.from('.header',{y:'-100%',ease: 'bounce'})
+.from('.navbar',{opacity: 0, stagger: .5})
+.from('.intro-text',{ x: '-100vw', ease: Power1})
+.from('.intro-image',{ x: '100vw', ease: "expoScale(0.5,7,none)" })
+.from('.footer',{ y: '100%', ease: Power1})

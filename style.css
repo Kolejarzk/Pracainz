@@ -37,6 +37,7 @@
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     background-color: #252525;
     position: relative;
+    z-index: 1000;
     
   }
   
@@ -86,6 +87,7 @@
     list-style: none;
     display: flex;
     gap: 2rem;
+    z-index: 1000;
    
   }
   
@@ -99,7 +101,8 @@
   .nav-links li a:hover {
     color: #6d3e8b;
     transition: color 1.0s;
-   
+    backdrop-filter: blur(10px);
+    background-color: #3a3a39;
   }
   
   /* MAIN - rozciąga się, aby stopka była na dole */
@@ -117,13 +120,15 @@
     flex-wrap: wrap; /* pozwala zawinąć, gdy brak miejsca */
     gap: 2rem;
     margin-bottom: 2rem;
-
+   
     
   }
   
   .intro-text {
     flex: 1;
     min-width: 250px; /* aby się ładnie zawijało w mniejszych rozdzielczościach */
+    position: relative;
+    z-index: 1;
     
     margin-top: 5%;
     
@@ -134,11 +139,13 @@
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: #F23535;
+    
   }
   
   .intro-text p {
     font-size: 1.1rem;
     line-height: 1.6;
+    
    
   }
   
@@ -202,10 +209,13 @@
       align-items: flex-start;
       justify-content: flex-start;
       backdrop-filter: blur(10px);
+      z-index: 1000;
+      
     }
     
     .nav-links.open {
       right: 0;
+      
 
     }
     .nav-links li {
