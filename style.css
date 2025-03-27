@@ -94,15 +94,19 @@
   .nav-links li a {
     text-decoration: none;
     color:#dddada;
-    font-weight: 500;
-    transition: color 0.3s;
+    font-weight: 500;  
   }
-  
-  .nav-links li a:hover {
-    color: #6d3e8b;
-    transition: color 1.0s;
-    backdrop-filter: blur(10px);
-    background-color: #3a3a39;
+ 
+  .nav-links a {
+    padding: 8px 12px;
+    border-radius: 24px;
+    transition: background-color 0.3s ease;
+    transition: letter-spacing 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    letter-spacing: 2px;
   }
   
   /* MAIN - rozciąga się, aby stopka była na dole */
