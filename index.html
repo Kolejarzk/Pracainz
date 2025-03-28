@@ -6,16 +6,20 @@
   <title>Portfolio Rafała</title>
   <link rel="stylesheet" href="style.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<!-- unpkg -->
+<script src="https://unpkg.com/@barba/core"></script>
 
+<!-- jsdelivr -->
+<script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
 
 
 
  
 </head>
-<body>
-  
+<body data-barba="wrapper">
+ 
   <!-- Struktura Flexbox na całe body -->
   <div class="wrapper">
     
@@ -38,9 +42,9 @@
         </ul>
       </nav>
     </header>
-    
+    <div class="content-wrapper">
     <!-- Główna zawartość strony -->
-    <main>
+    <main data-barba="container" data-barba-namespace="home">
       <!-- Sekcja powitalna i przykład pracy -->
       <section class="intro">
         <!-- Tekst po lewej stronie -->
@@ -58,20 +62,22 @@ Donec rhoncus enim venenatis massa lobortis sagittis. Vivamus tincidunt tellus a
           <img id="introImage" src="images/projekt1.jpg" alt="Przykładowa praca">
         </div>
       </section>
-
+  
       <!-- Sekcja przykładowych prac -->
-   
+      
     </main>
-
+    
     <!-- Stopka (sticky na dole) -->
-    <footer class="footer">
-      <p>&copy; 2025 Rafał – Wszystkie prawa zastrzeżone.</p>
-    </footer>
-
+    
   </div> <!-- .wrapper koniec -->
+  <footer class="footer">
+    <p>&copy; 2025 Rafał – Wszystkie prawa zastrzeżone.</p>
+  </footer>
+  </div> 
    <!-- Plik JavaScript -->
    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
    <script src="script.js"></script>
+   <script src="IndexAnimation.js"></script>
   
 </body>
 </html>

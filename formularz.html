@@ -8,7 +8,13 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <script src="https://unpkg.com/@barba/core"></script>
+
+<!-- jsdelivr -->
+<script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+
 </head>
 <body>
   <!-- Główny kontener (wrapper) -->
@@ -35,7 +41,7 @@
     </header>
 
     <!-- Główna zawartość podstrony Formularz kontaktowy -->
-    <main>
+    <main data-barba="container" data-barba-namespace="form">
       <section class="contact-form-section">
         <h1>Kontakt</h1>
         <p>
@@ -69,12 +75,11 @@
     </main>
 
     <!-- Stopka -->
-    <footer>
-      <p>&copy; 2025 Rafał – Wszystkie prawa zastrzeżone.</p>
-    </footer>
+  
   </div>
 
   <!-- Skrypt JS (np. do obsługi hamburger menu) -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
