@@ -12,25 +12,28 @@
      - Używamy flexbox do "rozciągnięcia" main tak, by stopka była zawsze na dole.
   */
   html, body {
-    height: 100%;
+   
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     color: #ffffff;
     background-color: #201f1f;
     overflow-x: hidden;
-    font-style: italic;
+    font-style: normal;
   }
   
   body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh
+    
   }
   
   .wrapper {
-    display: flex;
-    flex-direction: column;
-    flex: 1; /* wrapper wypełnia dostępne miejsce w body */
+    
+      min-height: 100dvh;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      grid-template-columns: minmax(0, 1fr);
+    
   }
   
   /* Nagłówek i nawigacja */
@@ -118,6 +121,7 @@
     margin: 0 auto;
     width: 100%;
     padding: 2rem 1rem;
+    display: flex;
     
   }
 
@@ -126,7 +130,7 @@
     display: flex;
     flex-wrap: wrap; /* pozwala zawinąć, gdy brak miejsca */
     gap: 2rem;
-    margin-bottom: 2rem;
+   
    
     
   }
@@ -137,14 +141,14 @@
     position: relative;
     z-index: 1;
     
-    margin-top: 5%;
+   
     
   }
   
   .intro-text h1 {
    
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+    
     color: #F23535;
     
   }
@@ -184,7 +188,7 @@
   /* STOPKA */
   footer {
     background-color: #201f1f;
-    
+   
     text-align: center;
     padding: 1rem 0;
     /* Nie używamy position: absolute ani fixed – 
@@ -435,22 +439,49 @@
   .about-content {
     flex-direction: column;
   }
-  :root {
-    --header-height: 3rem;
-    --footer-height: 2.5rem;
-  }
+
 }
-:root {
-  --header-height: 4rem;
-  --footer-height: 3rem;
-}
+
 
 #barba-wrapper { overflow: hidden; }
-[data-barba="container"] { position: absolute;  left:0; width:100%; align-items: center; }
+[data-barba="container"] { position: relative;   width:100%; align-items: center; }
+
 
 .content-wrapper {
-  position: relative;
-  flex: 1;
-  min-height: calc(100vh - 7rem); /* 4rem (header) + 3rem (footer) */
+  display: flex;
+  flex-direction: column;
+  flex:1;
+}
+@media (max-width: 768px) {
+  .wrapper {
+    min-height: 100dvh;
+  }
 }
 
+ul.transition {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+   /* lub inny kolor, który chcesz użyć do przejścia */
+  margin: 0;
+  z-index: 9999;
+  pointer-events: none;
+  
+}
+
+ul.transition li {
+  transform:scaleY(0);
+  background: #201f1f;
+  width: 20%;
+  z-index: 9999;
+  pointer-events: none;
+  
+}
+
+li::marker {
+  content: "";
+  
+}

@@ -23,6 +23,7 @@
   <!-- Struktura Flexbox na całe body -->
   <div class="wrapper">
     
+   
     <!-- Górny pasek nawigacji -->
     <header class="header">
       <nav class="navbar">
@@ -43,8 +44,8 @@
       </nav>
     </header>
     <div class="content-wrapper">
-    <!-- Główna zawartość strony -->
-    <main data-barba="container" data-barba-namespace="home">
+     <!-- Główna zawartość strony -->
+     <main data-barba="container" data-barba-namespace="home">
       <!-- Sekcja powitalna i przykład pracy -->
       <section class="intro">
         <!-- Tekst po lewej stronie -->
@@ -53,7 +54,7 @@
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pretium felis enim, in eleifend ligula sagittis non. Vivamus ullamcorper sapien ut dignissim elementum. Nullam tristique ultricies maximus. Curabitur nisl est, rhoncus id vulputate nec, vestibulum sit amet risus. Aliquam efficitur ex nec pulvinar pulvinar. Aenean commodo est magna, sed dictum diam fermentum sed. Quisque at turpis a est dapibus rhoncus sit amet fringilla orci. Donec quis vestibulum libero, ut pulvinar neque. Donec porta et metus nec ornare. In hac habitasse platea dictumst. Vestibulum mi purus, bibendum vitae posuere a, interdum in est. Phasellus massa tortor, maximus sed nisi non, laoreet pellentesque felis.
 
-Donec rhoncus enim venenatis massa lobortis sagittis. Vivamus tincidunt tellus a dui maximus blandit. Donec congue cursus urna. Fusce in eros nisi. Pellentesque rhoncus magna purus, at rhoncus orci viverra sed. In eu suscipit quam. Fusce id metus sit amet enim dictum ultrices ut eget ipsum. Suspendisse eget finibus erat. Suspendisse imperdiet tortor a facilisis rutrum. Pellentesque nec metus eu nulla mattis sollicitudin. Duis cursus vulputate tellus, quis eleifend eros blandit non.
+           Donec rhoncus enim venenatis massa lobortis sagittis. Vivamus tincidunt tellus a dui maximus blandit. Donec congue cursus urna. Fusce in eros nisi. Pellentesque rhoncus magna purus, at rhoncus orci viverra sed. In eu suscipit quam. Fusce id metus sit amet enim dictum ultrices ut eget ipsum. Suspendisse eget finibus erat. Suspendisse imperdiet tortor a facilisis rutrum. Pellentesque nec metus eu nulla mattis sollicitudin. Duis cursus vulputate tellus, quis eleifend eros blandit non.
           </p>
         </div>
         <!-- Zdjęcie / Slideshow po prawej stronie -->
@@ -62,22 +63,31 @@ Donec rhoncus enim venenatis massa lobortis sagittis. Vivamus tincidunt tellus a
           <img id="introImage" src="images/projekt1.jpg" alt="Przykładowa praca">
         </div>
       </section>
-  
-      <!-- Sekcja przykładowych prac -->
+      <ul class="transition">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      
       
     </main>
     
     <!-- Stopka (sticky na dole) -->
     
-  </div> <!-- .wrapper koniec -->
-  <footer class="footer">
-    <p>&copy; 2025 Rafał – Wszystkie prawa zastrzeżone.</p>
-  </footer>
+    </div> <!-- .wrapper koniec -->
+    
+    <footer class="footer">
+      <p>&copy; 2025 Rafał – Wszystkie prawa zastrzeżone.</p>
+     </footer>
   </div> 
+ 
+ 
    <!-- Plik JavaScript -->
    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
    <script src="script.js"></script>
-   <script src="IndexAnimation.js"></script>
-  
+   <!-- <script src="IndexAnimation.js"></script>
+  -->
 </body>
 </html>
