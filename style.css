@@ -197,7 +197,7 @@
   
   /* MEDIA QUERIES */
   /* Dla ekranów poniżej 768px zmieniamy układ nawigacji */
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     .hamburger {
       display: flex;
       
@@ -209,16 +209,13 @@
       background-color: #201f1f55;
       flex-direction: column;
       gap: 0;
-      width: 40%;
-      height: 500%;
+      width: 100%;
+      height: 100vh; /* Pełna wysokość ekranu */
       padding: 1rem;
-      border-left: 1px solid #ccc;
-      border-bottom: 1px solid #ccc;
-      border-radius: 1rem;
       transition: right 0.3s ease-in-out, 0.3s ease-in-out;
       display: flex;
-      align-items: flex-start;
-      justify-content: flex-start;
+      align-items:center;
+      justify-content: center ;
       backdrop-filter: blur(10px);
       z-index: 1000;
       
@@ -231,6 +228,11 @@
     }
     .nav-links li {
       margin-bottom: 1rem;
+    }
+    .nav-links a:hover {
+      color: rgba(249, 3, 3, 0.847);
+      transition: 0.4s ease;
+      
     }
   
     /* Siatka prac w jednej kolumnie */
@@ -484,4 +486,8 @@ ul.transition li {
 li::marker {
   content: "";
   
+}
+
+.no-scroll {
+  overflow: hidden;
 }
