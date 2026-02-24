@@ -53,12 +53,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function pageTransition() {
   var tl =gsap.timeline();
-  tl.to('ul.transition li', {duration: .5, scaleY:1,transformOrigin:"bottom left", stagger:.2 })
-  tl.to('ul.transition li', {duration: .5,scaleY: 0, transformOrigin:"bottom left", stagger: .1, delay: .1 })
+  tl.to('ul.transition li', {duration: .5, scaleY:1,transformOrigin:"bottom left", stagger:.2, ease:Power4.inOut })
+  tl.to('ul.transition li', {duration: .5,scaleY: 0, transformOrigin:"top left", stagger: .1, delay: .1, ease:Power4.inOut  })
 }
 
  function delay(n) {
-  n = n || 2000;
+  n = n || 0;
   return new Promise(done => {
     setTimeout(()=> {
       done();
@@ -71,28 +71,26 @@ function pageTransition() {
  }
 
 
-  barba.init({
-       async: true, 
-        
-       
-          transitions: [{
-            
-            async leave(data) {
-              const done = this.async();
-               
 
-               pageTransition();
-               await delay(1500);
-               done(); 
-            },
-            async enter(data) {
-              contentAnimation();
-            },
-            async once(data){
-             contentAnimation();
-            }
-    }]
-  })
+
+barba.init({
+  async: true,
+  transitions: [{
+    async leave(data) {
+      const done = this.async();
+      pageTransition();
+      await delay(1500);
+      done();
+    },
+    async enter(data) {
+      contentAnimation();
+    },
+    async once(data) {
+      contentAnimation();
+    }
+  }],
+  preventRunning: false // Pozwala na uruchamianie przejść nawet przy kliknięciu tej samej strony
+});
 
 
 
