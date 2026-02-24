@@ -1,12 +1,26 @@
 // Hamburger menu
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
+const style = document.createElement('style');
 
 hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('open'); 
   hamburger.classList.toggle('open');
   
 });
+
+  navLinks.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    hamburger.classList.toggle('open');
+  })
+
+   
+    if (navLinks.classList.contains('open')) {
+      style.innerHTML = '.no-scroll { overflow: hidden; }';
+      document.head.appendChild(style);
+    } else {
+      style.innerHTML = '';
+    }
 
 // Prosta rotacja obrazków po prawej stronie w sekcji intro
 const introImage = document.getElementById('introImage');
