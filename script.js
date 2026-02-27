@@ -21,7 +21,7 @@ hamburger.addEventListener('click', () => {
     } else {
       style.innerHTML = '';
     }
-
+function initSlider() {
 // Prosta rotacja obrazków po prawej stronie w sekcji intro
 const introImage = document.getElementById('introImage');
 
@@ -43,7 +43,7 @@ function changeImage() {
 
 // Uruchamiamy interwał
 setInterval(changeImage, 3000);
-
+}
 // gsap code here!
 
 
@@ -103,7 +103,15 @@ barba.init({
       contentAnimation();
     }
   }],
-  preventRunning: false // Pozwala na uruchamianie przejść nawet przy kliknięciu tej samej strony
+  preventRunning: false, // Pozwala na uruchamianie przejść nawet przy kliknięciu tej samej strony
+
+  views: [{
+    namespace: 'home',
+    afterEnter(data) {
+        initSlider(); // Odpal slider tylko gdy wchodzimy na home
+        // Tutaj też możesz odpalić IndexAnimation.js
+    }
+  }]
 });
 
 
