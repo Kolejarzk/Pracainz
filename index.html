@@ -2,25 +2,19 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio Rafała</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rafał Klusek | Portfolio grafika komputerowego</title>
+  <meta name="description" content="Portfolio grafika komputerowego i web designera - identyfikacja wizualna, UI/UX, DTP oraz kreacja cyfrowa." />
+  <link rel="stylesheet" href="style.css?v=2" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<!-- unpkg -->
-<script src="https://unpkg.com/@barba/core"></script>
-
-<!-- jsdelivr -->
-<script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
-
-
-
- 
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <!-- Barba.js Core -->
+  <script src="https://cdn.jsdelivr.net/npm/@barba/core@2.9.7"></script>
 </head>
-<body data-barba="wrapper">
- 
+<body>
 
+  <!-- Nakładka kurtynowa do animacji przejść między podstronami -->
   <ul class="transition">
     <li></li>
     <li></li>
@@ -28,68 +22,81 @@
     <li></li>
     <li></li>
   </ul>
-  <!-- Struktura Flexbox na całe body -->
+
   <div class="wrapper">
-    
-   
-    <!-- Górny pasek nawigacji -->
-    <header class="header">
+    <!-- Górny pasek nawigacyjny -->
+    <header>
       <nav class="navbar">
         <div class="logo">
-          <a href="#">Rafał Klusek | Design</a>
+          <a href="index.html">Rafał Klusek <span>| Design</span></a>
         </div>
-        <div class="hamburger" id="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
+        
+        <div class="nav-right">
+          <ul class="nav-links" id="nav-links">
+            <li><a href="index.html" class="active" data-i18n="nav_home">Strona główna</a></li>
+            <li><a href="galeria.html" data-i18n="nav_gallery">Galeria prac</a></li>
+            <li><a href="formularz.html" data-i18n="nav_contact">Formularz kontaktowy</a></li>
+            <li><a href="omnie.html" data-i18n="nav_about">O mnie</a></li>
+          </ul>
+
+          <!-- Przełącznik języka PL / EN -->
+          <div class="lang-switcher">
+            <button type="button" class="lang-btn active" data-lang="pl">PL</button>
+            <button type="button" class="lang-btn" data-lang="en">EN</button>
+          </div>
+
+          <!-- Przycisk menu mobilnego -->
+          <div class="hamburger" id="hamburger" aria-label="Przełącznik menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
-        <ul class="nav-links" id="nav-links">
-          <li><a href="index.html">Strona główna</a></li>
-          <li><a href="galeria.html">Galeria prac</a></li>
-          <li><a href="formularz.html">Formularz kontaktowy</a></li>
-          <li><a href="omnie.html">O mnie</a></li>
-        </ul>
       </nav>
     </header>
-    <div class="content-wrapper">
-     <!-- Główna zawartość strony -->
-     <main data-barba="container" data-barba-namespace="home">
-      <!-- Sekcja powitalna i przykład pracy -->
-      <section class="intro">
-        <!-- Tekst po lewej stronie -->
-        <div class="intro-text">
-          <h1 >Hej, mam na imię Rafał</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pretium felis enim, in eleifend ligula sagittis non. Vivamus ullamcorper sapien ut dignissim elementum. Nullam tristique ultricies maximus. Curabitur nisl est, rhoncus id vulputate nec, vestibulum sit amet risus. Aliquam efficitur ex nec pulvinar pulvinar. Aenean commodo est magna, sed dictum diam fermentum sed. Quisque at turpis a est dapibus rhoncus sit amet fringilla orci. Donec quis vestibulum libero, ut pulvinar neque. Donec porta et metus nec ornare. In hac habitasse platea dictumst. Vestibulum mi purus, bibendum vitae posuere a, interdum in est. Phasellus massa tortor, maximus sed nisi non, laoreet pellentesque felis.
 
-           Donec rhoncus enim venenatis massa lobortis sagittis. Vivamus tincidunt tellus a dui maximus blandit. Donec congue cursus urna. Fusce in eros nisi. Pellentesque rhoncus magna purus, at rhoncus orci viverra sed. In eu suscipit quam. Fusce id metus sit amet enim dictum ultrices ut eget ipsum. Suspendisse eget finibus erat. Suspendisse imperdiet tortor a facilisis rutrum. Pellentesque nec metus eu nulla mattis sollicitudin. Duis cursus vulputate tellus, quis eleifend eros blandit non.
-          </p>
-        </div>
-        <!-- Zdjęcie / Slideshow po prawej stronie -->
-        <div class="intro-image">
-          <!-- img z id, aby w JS można było podmieniać src -->
-          <img id="introImage" src="images/projekt1.jpg" alt="Przykładowa praca">
-        </div>
-      </section>
-      
-      
-      
-    </main>
-    
-    <!-- Stopka (sticky na dole) -->
-    
-    </div> <!-- .wrapper koniec -->
-    
+    <div class="content-wrapper" data-barba="wrapper">
+      <!-- Główny kontener Barba.js dla strony głównej -->
+      <main data-barba="container" data-barba-namespace="home">
+        <section class="intro">
+          <!-- Kolumna z tekstem powitalnym -->
+          <div class="intro-text">
+            <h1 data-i18n="hero_title">Hej, mam na imię <span>Rafał</span></h1>
+            <div class="intro-subtitle" data-i18n="hero_sub">Grafik komputerowy & Web Designer</div>
+            <p data-i18n="hero_desc">
+              Projektuję nowoczesne identyfikacje wizualne, grafikę użytkową oraz intuicyjne interfejsy cyfrowe. Łączę zmysł estetyczny z wiedzą z zakresu technologii internetowych, tworząc projekty, które realizują cele biznesowe.
+            </p>
+            <div class="intro-cta">
+              <a href="galeria.html" class="btn-primary" data-i18n="hero_btn_gallery">Zobacz galerię prac</a>
+              <a href="formularz.html" class="btn-secondary" data-i18n="hero_btn_contact">Skontaktuj się</a>
+            </div>
+          </div>
+
+          <!-- Kolumna z obrotową prezentacją prac (Slider) -->
+          <div class="intro-image">
+            <a href="galeria.html" class="slider-card" title="Kliknij, aby przejść do galerii prac">
+              <div class="slider-img-wrap">
+                <img id="introImage" src="images/projekt1.jpg" alt="Wybrany projekt portfolio">
+              </div>
+              <div class="slider-info">
+                <span class="slider-caption" id="sliderCaption">Identyfikacja wizualna marki</span>
+                <span class="slider-tag" id="sliderTag" data-i18n="slider_badge">Projekt wyróżniony</span>
+              </div>
+            </a>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Stopka serwisu -->
     <footer class="footer">
-      <p>&copy; 2025 Rafał – Wszystkie prawa zastrzeżone.</p>
-     </footer>
-  </div> 
- 
- 
-   <!-- Plik JavaScript -->
-   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
-   <script src="script.js"></script>
-  <script src="IndexAnimation.js"></script>
-  
+      <p data-i18n="footer_text">&copy; 2025 Rafał Klusek – Wszystkie prawa zastrzeżone. Praca dyplomowa inżynierska.</p>
+    </footer>
+  </div>
+
+  <!-- Biblioteki i skrypty JS -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="IndexAnimation.js?v=2"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>
